@@ -1,6 +1,5 @@
 time_list = ["23:59", "00:00"]
 
-
 def remove_semicolon(el):
     if el == "00:00":
         el = "24:00"
@@ -10,6 +9,9 @@ def remove_semicolon(el):
 
 
 def find_min_minutes_def(times):
+    if len(times) < 2:
+        raise ValueError("List should have at least 2 items")
+    
     updated_list = list(map(remove_semicolon, times))
     updated_list.sort()
 
@@ -22,4 +24,4 @@ def find_min_minutes_def(times):
     return minimum_minutes_def
 
 
-find_min_minutes_def(time_list)
+print(find_min_minutes_def(time_list))
