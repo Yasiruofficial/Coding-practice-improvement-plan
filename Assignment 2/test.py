@@ -15,6 +15,9 @@ class TestMain(unittest.TestCase):
         
     def test_when_array_has_zero(self):
         self.assertEqual(main.maxSubArray([-2,1,-3,4,0,0,1,-5,4]),5)
+    
+    def test_when_array_has_zero(self):
+        self.assertEqual(main.maxSubArray([-3]),-3)
         
 
 unittest.main()
